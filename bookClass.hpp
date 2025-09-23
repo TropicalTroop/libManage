@@ -11,8 +11,8 @@ class Book{
 public:
    Book(); //Default Constructor
    
-   Book(std::string, std::string, int, std::string, bool, int);
-   //Takes in Title, Author, ISBN, genre, Availability, and barcode into overloaded constructor.
+   Book(std::string, std::string, int, std::string, int);
+   //Takes in Title, Author, ISBN, genre, and barcode into overloaded constructor.
    
    std::string getTitle() const;
    //Returns the book's title as std::string.
