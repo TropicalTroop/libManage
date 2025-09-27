@@ -2,6 +2,7 @@
 Atharva, Nikhil, Po, 9/26/25 */
 #include "bookClass.hpp"
 #include <vector>
+#include <string>
 
 #ifndef LIBRARY_H
 #define LIBRARY_H
@@ -11,8 +12,8 @@ public:
    //Default constructor, initializes catalogue and userList vectors
    Library();
 
-   //Overloaded constructor, takes in two vectors and assigns them to private data members
-   Library(std::vector<Book>, std::vector<User>);
+   //Overloaded constructor, takes in two vectors and assigns them to private data members 
+   Library(std::vector<Book> , std::vector<User>);
 
    //Assigns a book to a user, makes book unavailable, "checking it out"
    void checkoutBook(Book, User);
