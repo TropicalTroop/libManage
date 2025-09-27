@@ -41,12 +41,4 @@ private:
    int barcode; //stores barcode as integer
 };
 
-/*
-{ Book, bool, int
-  Book, bool, int
-|
-|
-V
-}
-*/
 #endif
