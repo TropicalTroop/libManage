@@ -21,8 +21,10 @@ void User::addBook(Book* book){
 
 void User::removeBook(Book* book){
     for(int i = 0; i < myBooks.size(); i++){
-        if(myBooks[i] = book){
+        if(myBooks[i] == book){
+            myBooks[i]->setAvailability(true);
             myBooks.erase(myBooks.begin() + i);
+            
         }
     }
 }
@@ -37,11 +39,11 @@ void User::printAccount() const{
     }
 }
 
-int User::getBookCount(){
+int User::getBookCount() const{
     return myBooks.size();
 }
 
-Book* User::bookAddress(int index){
+Book* User::bookAddress(int index) const{
     return myBooks[index];
 }
 

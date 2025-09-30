@@ -32,9 +32,9 @@ class User
         // @return void
         void removeBook(Book* book);
 
-        int getBookCount();
+        int getBookCount() const;
 
-        Book* bookAddress(int);
+        Book* bookAddress(int) const;
 
         void printAccount() const;
 

@@ -17,31 +17,31 @@ public:
    Library(std::vector<Book> , std::vector<User>);
 
    //Assigns a book to a user, makes book unavailable, "checking it out"
-   void checkoutBook(Book, User);
+   void checkoutBook(const Book&, User&);
 
    //Removes book from user, makes it available, "returns it"
-   void returnBook(Book);
+   void returnBook(const Book& b1);
 
    // Returns whether a book is available or unavailable as bool
-   bool getBookStatus(Book);
+   bool getBookStatus(const Book) const;
 
    // Returns title, ISBN, genre, author, availability, and barcode of book
-   void bookDetails(Book);
+   void bookDetails(const Book) const;
 
    // Adds a book to the catalogue
-   void addBook(Book);
+   void addBook(const Book);
 
    // Returns vector of copies of a book
-   Book findBookCopies(Book);
+   Book* findBookCopies(const Book&);
 
    // Removes a book from the catalogue
-   void removeBook(Book);
+   void removeBook(const Book&);
 
    // Adds user to list of Users (userList)
-   void addUser(User);
+   void addUser(const User&);
 
    //Removes user from list of users (userList)
-   void removeUser(User);
+   void removeUser(const User&);
    
 private:
    // Vector containing all books within the library

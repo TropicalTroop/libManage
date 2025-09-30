@@ -13,13 +13,13 @@ Book::Book(){
 
 /* Overloaded constructor for Book
 @param Title (string), Author (string) ISBN (int) Genre (string) Barcode (int)*/
-Book::Book(std::string title, std::string author, int ISBN, std::string genre, int barcode){
+Book::Book(std::string title, std::string author, int ISBN, std::string genre, int barcode, bool availability){
     this->title = title;
     this->author = author;
     this->ISBN = ISBN;
     this->genre = genre;
     this->barcode = barcode;
-    this->availability = true;
+    this->availability = availability;
 }
 
 /* Returns the title of the book
@@ -41,6 +41,10 @@ std::string Book::getAuthor() const{
 @return std::string*/
 std::string Book::getGenre() const{
     return genre;
+}
+
+int Book::getISBN() const{
+    return ISBN;
 }
 
 /* Returns availability of the book
