@@ -2,6 +2,7 @@
 Atharva, Nikhil, Po
 09/23/25 */
 #include <string>
+#include <iostream>
 
 #ifndef BOOK_H
 #define BOOK_H
@@ -31,6 +32,11 @@ public:
    
    int getISBN() const;
    //returns book's ISBN as an integer.
+
+   void setAvailability(bool);
+   //sets availability of book;
+
+   void printBook() const;
    
 private:
    std::string title; //Stores the title as std::string

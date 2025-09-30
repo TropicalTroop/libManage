@@ -1,6 +1,7 @@
 /* Library Class Definition
 Atharva, Nikhil, Po, 9/26/25 */
-#include "bookClass.hpp"
+#include "book.h"
+#include "user.h"
 #include <vector>
 #include <string>
 
@@ -19,16 +20,19 @@ public:
    void checkoutBook(Book, User);
 
    //Removes book from user, makes it available, "returns it"
-   void returnBook(Book, User);
+   void returnBook(Book);
 
    // Returns whether a book is available or unavailable as bool
    bool getBookStatus(Book);
 
    // Returns title, ISBN, genre, author, availability, and barcode of book
-   std::string bookDetails(Book);
+   void bookDetails(Book);
 
    // Adds a book to the catalogue
    void addBook(Book);
+
+   // Returns vector of copies of a book
+   Book findBookCopies(Book);
 
    // Removes a book from the catalogue
    void removeBook(Book);
@@ -38,6 +42,7 @@ public:
 
    //Removes user from list of users (userList)
    void removeUser(User);
+   
 private:
    // Vector containing all books within the library
    std::vector<Book> catalogue;
