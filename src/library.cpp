@@ -1,7 +1,9 @@
 #include "library.h"
 
+/* Default Constructor
+@param none
+@return none*/
 Library::Library() {
-    // Initialize empty vectors
     catalogue = std::vector<Book>();
     userList = std::vector<User>();
 }
@@ -37,6 +39,9 @@ void Library::checkoutBook(const Book& b1, User& u1){
 
 }
 
+/* Function to return books
+@param address of Book object
+@return void*/
 void Library::returnBook(const Book& b1){
     for(int i = 0; i < userList.size(); i++){
         for(int j = 0; j < userList[i].getBookCount(); j++){
@@ -48,6 +53,9 @@ void Library::returnBook(const Book& b1){
     }
 }
 
+/* Function to return pointer to available copy of book
+@param address of Book Object
+@return pointer to book object*/
 Book* Library::findBookCopies(const Book& target){
     for(int i = 0; i < catalogue.size(); i++){
         if(target.getISBN() == catalogue[i].getISBN() && catalogue[i].getAvailability() != false){
@@ -58,18 +66,30 @@ Book* Library::findBookCopies(const Book& target){
     return nullptr;
 }
 
+/* Function to return availability of book
+@param Book object
+@return boolean*/
 bool Library::getBookStatus(const Book b1) const{
     return b1.getAvailability();
 }
 
+/* Function to print all details of book
+@param book object
+@return boolean*/
 void Library::bookDetails(const Book b1) const{
     b1.printBook();
 }
 
+/*Function to add a book to the end of catalogue
+@param book
+@return void*/
 void Library::addBook(const Book b1){
     catalogue.push_back(b1);
 }
 
+/*Function to remove a book from the catalogue
+@param address of Book object
+@return void*/
 void Library::removeBook(const Book& target){
     for(int i = 0; i < catalogue.size(); i++){
         if(target.getBarcode() == catalogue[i].getBarcode()){
@@ -81,10 +101,16 @@ void Library::removeBook(const Book& target){
     }
 }
 
+/* Function to add a user to the list of users
+@param address of user object
+@return void*/
 void Library::addUser(const User& u1){
     userList.push_back(u1);
 }
 
+/* Function to remove a user from the list of users
+@param address of the user
+@return void*/
 void Library::removeUser(const User& target){
     for(int i = 0; i < userList.size(); i++){
         if(target.getID() == userList[i].getID()){

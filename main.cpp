@@ -86,7 +86,7 @@ int main(){
 	bool execute = true;
 	while(execute){
 		std::cout << "Library Menu: " <<std::endl;
-		std:: cout << "Hello, " << userName << " (age " << userAge << ") " << std::endl;
+		std:: cout << "Hello, " << userName << " (ID " << userID << ") " << std::endl;
 		std::cout << "1) Show catalogue\n";
 		std::cout << "2) Checkout a  book (by barcode)\n";
 		std::cout << "3) Return a book (by barcode)\n";

@@ -1,24 +1,33 @@
 #include "user.h"
 #include <iostream>
 
-/* Overloaded constructor called during creation
-@param name is name of user
-@param age is age of user*/
+/* Default Constructor
+@param none*/
 User::User(){
     name = "";
     age = 0;
     ID = 0;
 }
+/* Overloaded constructor called during creation
+@param name is name of user
+@param age is age of user
+@param ID is id of user*/
 User::User(std::string name, int age, int ID){
     this->name = name;
     this->age = age;
     this->ID = ID;
 }
 
+/* Adds a book to the user's list
+@param pointer to a book object
+@return void*/
 void User::addBook(Book* book){
     myBooks.push_back(book);
 }
 
+/*Removes a book from the user's list
+@param pointer to a book object
+@return void*/
 void User::removeBook(Book* book){
     for(int i = 0; i < myBooks.size(); i++){
         if(myBooks[i] == book){
@@ -29,6 +38,8 @@ void User::removeBook(Book* book){
     }
 }
 
+/* Prints all of the user's attributes
+@param none*/
 void User::printAccount() const{
     std::cout << "Name: " << name << std::endl;
     std::cout << "Age: " << age << std::endl;
