@@ -50,14 +50,23 @@ void User::printAccount() const{
     }
 }
 
+/* Returns the amount of books in the user's list of books
+@param none
+@return integer*/
 int User::getBookCount() const{
     return myBooks.size();
 }
 
+/* Returns a pointer to a book
+@param integer
+@return Book object pointer*/
 Book* User::bookAddress(int index) const{
     return myBooks[index];
 }
 
+/* Returns the ID of the user
+@param none
+@return integer*/
 int User::getID() const{
     return ID;
 }

@@ -43,6 +43,9 @@ std::string Book::getGenre() const{
     return genre;
 }
 
+/* Returns the ISBN of the book
+@param none
+@return integer*/
 int Book::getISBN() const{
     return ISBN;
 }
