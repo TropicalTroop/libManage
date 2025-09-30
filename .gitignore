@@ -1,5 +1,5 @@
-books.txt
-users.txt
-./.vscode
-a.out
-.DS_Store
+/books.txt
+/users.txt
+/.vscode
+/a.out
+/.DS_Store
