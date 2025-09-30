@@ -10,32 +10,52 @@ Atharva, Nikhil, Po
 // Class Definition for Book
 class Book{
 public:
-   Book(); //Default Constructor
+   /*Default constructor for Book
+   @param none */
+   Book(); 
    
+   /* Overloaded constructor for Book
+   @param Title (string), Author (string) ISBN (int) Genre (string) Barcode (int)*/
    Book(std::string, std::string, int, std::string, int, bool);
-   //Takes in Title, Author, ISBN, genre, and barcode into overloaded constructor.
    
+   /* Returns the title of the book
+   @param none
+   @return std::string*/
    std::string getTitle() const;
-   //Returns the book's title as std::string.
    
+   /* Returns author of the book
+   @param none
+   @return std::string*/
    std::string getAuthor() const;
-   //returns book's author as std::string.
-   
+
+   /* Returns genre of the book
+   @param none
+   @return std::string*/
    std::string getGenre() const;
-   //returns book's genre as std::string.
-   
+
+   /* Returns availability of the book
+   @param none
+   @return bool*/
    bool getAvailability() const;
-   //returns book's availability as true or false bool.
    
+   /* Returns Barcode of the book
+   @param none
+   @return int*/
    int getBarcode() const;
-   //returns the book's barcode as an integer
    
+   /* Returns the ISBN of the book
+   @param none
+   @return integer*/
    int getISBN() const;
-   //returns book's ISBN as an integer.
 
+   /* Sets availability of the book
+   @param bool
+   @return none*/
    void setAvailability(bool);
-   //sets availability of book;
 
+   /* Prints all traits of book
+   @param none
+   @return none*/
    void printBook() const;
    
 private:

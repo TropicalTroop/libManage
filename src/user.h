@@ -32,12 +32,23 @@ class User
         // @return void
         void removeBook(Book* book);
 
+        /* Returns the amount of books in the user's list of books
+        @param none
+        @return integer*/
         int getBookCount() const;
 
+        /* Returns a pointer to a book
+        @param integer
+        @return Book object pointer*/
         Book* bookAddress(int) const;
-
+        
+        /* Prints all of the user's attributes
+        @param none*/
         void printAccount() const;
 
+        /* Returns the ID of the user
+        @param none
+        @return integer*/
         int getID() const;
     private:
         std::vector<Book*> myBooks;  // list of books user has borrowed
