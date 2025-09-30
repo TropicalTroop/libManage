@@ -2,3 +2,4 @@ books.txt
 users.txt
 ./.vscode
 a.out
+.DS_Store
